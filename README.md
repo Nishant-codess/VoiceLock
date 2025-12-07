@@ -264,7 +264,42 @@ Download from: [https://www.python.org/downloads/](https://www.python.org/downlo
 
 
 
-**Option A (scoop):**
+**Option A (Recommended - Using winget - Windows 11/10):**
+
+
+
+```powershell
+
+winget install ffmpeg
+
+```
+
+If `winget` is not available, use Option B or C below.
+
+
+
+---
+
+
+
+**Option B (Using Scoop - requires Scoop first):**
+
+
+
+**First, install Scoop (if not already installed):**
+
+
+
+```powershell
+
+# Run PowerShell as Administrator, then:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+```
+
+
+
+**Then install FFmpeg:**
 
 
 
@@ -276,11 +311,47 @@ scoop install ffmpeg
 
 
 
-**Option B (manual):**
+---
 
-Download from: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
 
-Add FFmpeg `/bin` folder to PATH.
+
+**Option C (Manual Installation - Easiest for beginners):**
+
+
+
+1. **Download FFmpeg:**
+
+   - Go to: [https://www.gyan.dev/ffmpeg/builds/](https://www.gyan.dev/ffmpeg/builds/)
+
+   - Download the **ffmpeg-release-essentials.zip** file
+
+   - Extract the zip file to a folder (e.g., `C:\ffmpeg`)
+
+2. **Add to PATH:**
+
+   - Press `Win + X` and select **"System"**
+
+   - Click **"Advanced system settings"**
+
+   - Click **"Environment Variables"**
+
+   - Under **"System variables"**, find and select **"Path"**, then click **"Edit"**
+
+   - Click **"New"** and add the path to the `bin` folder (e.g., `C:\ffmpeg\bin`)
+
+   - Click **"OK"** on all windows
+
+3. **Verify installation:**
+
+   Open a **new** PowerShell window and run:
+
+   ```powershell
+
+   ffmpeg -version
+
+   ```
+
+   If you see version information, FFmpeg is installed correctly!
 
 
 
