@@ -204,7 +204,7 @@ Or manually:
 
 ```bash
 
-pip install fastapi uvicorn librosa numpy pydub soundfile speechbrain torch torchaudio python-multipart
+pip install fastapi>=0.104.0 uvicorn[standard]>=0.24.0 librosa>=0.10.0 numpy>=1.24.0 pydub>=0.25.0 soundfile>=0.12.0 speechbrain>=0.5.0 torch>=2.0.0 torchaudio>=2.0.0 python-multipart>=0.0.6
 
 ```
 
@@ -391,7 +391,7 @@ Or manually:
 
 ```powershell
 
-pip install fastapi uvicorn librosa numpy pydub soundfile speechbrain torch torchaudio python-multipart
+pip install fastapi>=0.104.0 uvicorn[standard]>=0.24.0 librosa>=0.10.0 numpy>=1.24.0 pydub>=0.25.0 soundfile>=0.12.0 speechbrain>=0.5.0 torch>=2.0.0 torchaudio>=2.0.0 python-multipart>=0.0.6
 
 ```
 
