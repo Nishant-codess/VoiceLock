@@ -215,7 +215,7 @@ Then test via:
 
 MIT License.
 
-❤️ Acknowledgements
+❤️  Acknowledgements
 
 SpeechBrain ECAPA-TDNN Speaker Recognition Model
 
