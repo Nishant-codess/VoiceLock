@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoiceAuthentication – Voice Biometric Authentication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit orbit-2"></div>
+
+  <main class="shell">
+    <header class="topbar">
+      <div class="logo">
+        <span class="logo-orb"></span>
+        <span class="logo-text">VoiceLock <span>2.0</span></span>
+      </div>
+      <div class="status-pill" id="backendStatus">
+        ● Checking backend…
+      </div>
+    </header>
+
+    <section class="card">
+      <nav class="tab-bar">
+        <button class="tab active" data-tab="register">Register Voice</button>
+        <button class="tab" data-tab="verify">Verify Identity</button>
+      </nav>
+
+      <div class="card-body">
+        <!-- Shared username field -->
+        <div class="field">
+          <label for="username">User ID</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter a unique username (e.g., nishant01)"
+          />
+        </div>
+
+        <!-- Fixed phrase display -->
+        <div class="phrase-box">
+          <div class="phrase-label">Fixed Passphrase</div>
+          <div class="phrase-text">“My voice is my password.”</div>
+        </div>
+
+        <!-- Recording section -->
+        <section class="rec-section">
+          <div class="mic-wrapper">
+            <button id="recordBtn" class="mic-btn">
+              <div class="mic-pulse"></div>
+              <div class="mic-icon">
+                <span class="mic-line line-1"></span>
+                <span class="mic-line line-2"></span>
+                <span class="mic-line line-3"></span>
+              </div>
+            </button>
+            <p id="recordHint" class="hint">
+              Tap to start recording. Speak the phrase clearly and naturally.
+            </p>
+          </div>
+
+          <div class="wave-wrapper" id="waveWrapper">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+        </section>
+
+        <!-- Action buttons -->
+        <div class="actions">
+          <button id="submitBtn" class="primary-btn" disabled>
+            <span id="submitLabel">Register Voice</span>
+          </button>
+          <button id="resetBtn" class="ghost-btn" type="button">
+            Reset
+          </button>
+        </div>
+
+        <!-- Output / logs -->
+        <section class="output">
+          <div class="output-header">
+            <span>System Output</span>
+            <span class="dot" id="outputDot"></span>
+          </div>
+          <div id="outputLog" class="output-log">
+            Ready. Choose a mode and record your voice.
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Powered by FastAPI & SpeechBrain ECAPA-TDNN · Local, private, ML-based voice biometrics</span>
+    </footer>
+  </main>
+</body>
+</html>

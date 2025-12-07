@@ -1,0 +1,48 @@
+# -------------------------
+# Python Virtual Environment
+# -------------------------
+venv/
+.env/
+
+# -------------------------
+# Python Cache
+# -------------------------
+__pycache__/
+*.pyc
+
+# -------------------------
+# Audio uploads
+# -------------------------
+temp_audio/
+backend/temp_audio/
+*.wav
+*.webm
+
+# -------------------------
+# SpeechBrain downloaded models
+# -------------------------
+backend/pretrained_model/
+backend/pretrained_model/**/*
+
+# -------------------------
+# Saved voice embeddings
+# -------------------------
+backend/models/user_voiceprints.npy
+*.npy
+
+# -------------------------
+# macOS system files
+# -------------------------
+.DS_Store
+
+# -------------------------
+# Node / frontend (future)
+# -------------------------
+node_modules/
+dist/
+
+# -------------------------
+# IDE folders
+# -------------------------
+.vscode/
+.idea/
